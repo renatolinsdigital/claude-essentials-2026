@@ -152,35 +152,20 @@ These do not replace renewing the chat, they delay the point where you need to.
 
 ## 5. Stop sounding like AI
 
-Claude has recognizable verbal tics. If you are writing anything a human will read, strip these out.
+Claude has recognizable verbal tics: fake contrasts ("it's not X, it's Y"), a fixed set of overused words (delve, leverage, unlock, tapestry, seamless, robust, pivotal, harness, empower, streamline, game-changer), em dashes, Title-Case Headings, bold-first bullets, "let's dive in," and a reflex for lists of exactly three. None of it is wrong, all of it reads as AI. Strip it out of anything a human will read.
 
-### Giveaway sentence shapes
+- **Do:** write plain sentences, use the honest number of items in a list, save bold and headings for material meant to be scanned, not persuaded.
+- **Don't:** use fake contrasts, banned words, em dashes, or three-item lists by default.
 
-- "It's not X, it's Y."
-- "Forget X. This is Y."
-- "Less X, more Y."
-- "The question isn't X. The question is Y."
-- "X is dead. Y is the future."
+### Make Claude enforce it automatically
 
-All five are the same move: a fake contrast that sounds insightful and says nothing.
+Don't retype these rules into every prompt. Put them once in a skill and Claude loads them whenever it's writing for a human.
 
-### Banned words
+1. Create `.claude/skills/anti-ai-writing-style/SKILL.md` in your project (or `~/.claude/skills/` to apply it everywhere).
+2. Give it a short description plus the banned list and shapes above, and one instruction: check any draft meant for a human reader against this list before showing it.
+3. Reference it from `CLAUDE.md` if you want it loaded by default, or just invoke it by name when a task calls for it.
 
-delve, leverage, unlock, tapestry, seamless, robust, pivotal, harness, empower, streamline, game-changer
-
-### Also remove
-
-- Em dashes
-- Title-Case Headings
-- Bold-first bullets ("**Thing:** explanation")
-- "Let's dive in"
-- Lists of exactly three things
-
-That last one is real. Claude reaches for three items by reflex. Use two, or five, or seven, when that is the honest number.
-
-### How to enforce it
-
-Keep an anti-ai-writing-style skill containing the banned words and banned sentence shapes, and have Claude audit its own drafts against it before showing you anything. This rule applies to prose meant for a human reader: emails, posts, decks. It does not apply to reference material like this one, where bold labels and short bullets exist to make the page scannable, not to sound persuasive.
+Same skill, updated in one place, works across every project and every chat.
 
 ---
 
