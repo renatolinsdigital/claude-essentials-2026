@@ -1,4 +1,4 @@
-# Claude Basics - Using It in 2026
+# Claude Essential tips to consider in 2026
 
 A practical cheat sheet for choosing the right model, prompting better, and avoiding the common mistakes. Written for people who use Claude every day and want more out of it without reading extensive documentation.
 
